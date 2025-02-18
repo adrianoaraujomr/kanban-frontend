@@ -1,0 +1,26 @@
+<div style="text-align: center; background-color: yellow;">
+    <h1 style="font-size: xx-large;">Cards</h1>
+    <div style="display: table; margin: 0 auto">
+        <div *ngFor="let status of cardStatus" style="display: table-cell; padding-right: 30px; padding-left: 30px;">
+            <h1 style="font-size: xx-large;">{{status}}</h1>
+            <div *ngFor="let card of filterByStatus(status)" style="padding-top: 10px; padding-bottom: 10px;">
+                <div id="card" class="to-do-card">
+                    <div class="title">
+                        {{card.title}}
+                    </div>
+                    <div class="image-div">
+                        <img [src]="card.image" class="image">
+                    </div>
+                    <div>
+                        {{card.description.length > 150 ? card.description.substring(0, 147) + '...' : card.description}}
+                    </div>
+                    <div class="footer">
+                        <img class="icon" src="https://cdn.pixabay.com/photo/2020/09/30/07/48/heart-5614865_640.png">
+                        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/9069/9069013.png">
+                        <img class="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA1m9ch1J2X77lno62sBQdoTnUSulLLBeGHw&s">
+                    </div>
+                </div>
+            </div>    
+        </div>    
+    </div>
+</div>

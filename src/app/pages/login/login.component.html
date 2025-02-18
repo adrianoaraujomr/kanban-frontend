@@ -1,0 +1,25 @@
+<div class="background">
+  <div style="text-align: center; padding-top: 130px; padding-bottom: 540px">
+    <form [formGroup]="formGroup">
+      <div style="padding-top: 20px">
+        <div style="padding-bottom: 3px; font-weight: bolder">メール</div>
+        <div>
+          <input formControlName="username" style="font-size: larger" />
+        </div>
+      </div>
+      <div style="padding-top: 20px">
+        <div style="padding-bottom: 3px; font-weight: bolder">暗証番号</div>
+        <div>
+          <input
+            formControlName="password"
+            type="password"
+            style="font-size: larger"
+          />
+        </div>
+      </div>
+    </form>
+    <div style="padding-top: 20px">
+      <button (click)="submit()">ログイン</button>
+    </div>
+  </div>
+</div>
