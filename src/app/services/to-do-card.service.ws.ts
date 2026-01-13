@@ -8,6 +8,6 @@ export class ToDoCardWS {
   constructor(private httpClient: HttpClient) {}
 
   list(): Observable<ToDoCard[]> {
-    return this.httpClient.get<ToDoCard[]>('http://localhost:5000/to-do-card/');
+    return this.httpClient.get<ToDoCard[]>('http://localhost:5000/to-do-card');
   }
 }
